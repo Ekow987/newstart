@@ -1,27 +1,27 @@
-import React from 'react';
-import {View, Button} from "react-native";
+import React from "react";
+import { View, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-function createBtn({navigation}) {
+function CreateBtn() {
+  const navigation = useNavigation();
 
-    const handlePress = () => {
-        navigation.navigate("Create");
-      };
-    return (
-        <View>
-        <Button
+  const handlePress = () => {
+    navigation.navigate("Create");
+  };
+
+  return (
+    <View>
+      <Button
         title={"ADD"}
         onPress={handlePress}
         mr={10}
-        color={"red.700"}
+        color="red"
         style={{
           backgroundColor: "red",
         }}
-         
- />
-
-        </View>
-       
-    );
+      />
+    </View>
+  );
 }
 
-export default createBtn;
+export default CreateBtn;
