@@ -3,8 +3,14 @@
     "name": "newstart",
     "slug": "newstart",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
+    "assetBundlePatterns": ["**/*"],
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos gallery"
+        }
+      ]
     ]
   },
   "name": "newstart"
